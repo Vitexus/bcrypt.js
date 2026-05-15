@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+export DH_VERBOSE = 1
+
+%:
+	dh $@
+
+override_dh_auto_build:
+
+override_dh_auto_install:
+	install -d debian/node-bcryptjs/usr/share/nodejs/bcryptjs
+	cp -a *.js *.ts *.json src debian/node-bcryptjs/usr/share/nodejs/bcryptjs/ 2>/dev/null || true
+	cp -a dist debian/node-bcryptjs/usr/share/nodejs/bcryptjs/ 2>/dev/null || true
+	install -d debian/node-bcryptjs/usr/bin
+	printf '#!/bin/sh\nexec /usr/bin/node /usr/share/nodejs/bcryptjs/bin/bcrypt "$$@"\n' \
+		> debian/node-bcryptjs/usr/bin/bcrypt
+	chmod 755 debian/node-bcryptjs/usr/bin/bcrypt
+
+override_dh_shlibdeps:
+
+override_dh_strip:
+
+override_dh_fixperms:
+	dh_fixperms
+	chmod 755 debian/node-bcryptjs/usr/bin/bcrypt

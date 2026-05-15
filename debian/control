@@ -1,0 +1,17 @@
+Source: node-bcryptjs
+Section: javascript
+Priority: optional
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Build-Depends: debhelper-compat (= 13), nodejs (>= 12)
+Standards-Version: 4.6.2
+Homepage: https://github.com/dcodeIO/bcrypt.js
+Vcs-Git: https://github.com/Vitexus/bcrypt.js.git
+Vcs-Browser: https://github.com/Vitexus/bcrypt.js
+
+Package: node-bcryptjs
+Architecture: all
+Depends: ${misc:Depends}, nodejs (>= 12)
+Description: Optimized bcrypt in plain JavaScript with zero dependencies
+ bcryptjs is an optimized bcrypt implementation in plain JavaScript
+ with zero dependencies, compatible with the C++ bcrypt binding and
+ the original bcrypt implementation. Includes TypeScript support.
