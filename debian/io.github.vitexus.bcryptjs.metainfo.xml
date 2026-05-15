@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="console-application">
+  <id>io.github.vitexus.bcryptjs</id>
+  <metadata_license>MIT</metadata_license>
+  <project_license>BSD-3-Clause</project_license>
+  <name>bcryptjs</name>
+  <summary>Optimized bcrypt in plain JavaScript with zero dependencies</summary>
+  <description>
+    <p>
+      bcryptjs is an optimized bcrypt implementation in plain JavaScript
+      with zero dependencies, compatible with the C++ bcrypt binding and
+      the original bcrypt implementation. Includes TypeScript type definitions
+      and a command-line interface for hashing passwords.
+    </p>
+  </description>
+  <categories>
+    <category>Utility</category>
+  </categories>
+  <url type="homepage">https://github.com/dcodeIO/bcrypt.js</url>
+  <url type="bugtracker">https://github.com/dcodeIO/bcrypt.js/issues</url>
+  <url type="vcs-browser">https://github.com/Vitexus/bcrypt.js</url>
+  <developer id="io.github.vitexus">
+    <name>VitexSoftware</name>
+  </developer>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="3.0.3" date="2024-01-01"/>
+  </releases>
+</component>
